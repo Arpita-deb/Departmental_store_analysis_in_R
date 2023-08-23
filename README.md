@@ -55,14 +55,20 @@ Before feeding the data into RStudio, a quick cleanup is performed in Excel. The
 * Ensured that the data is in a tabular format of rows and columns with: similar data in each column, all columns and rows visible, and no blank rows within the range.
 
 * fixed mispelling and typos with the help of Spellcheck and  the Find and Replace dialog box.
+  
+![find ](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/9b2eacae-a2cb-491b-9873-f7b1864d3b67)
 
 * Removed duplicates using Remove Duplicate.
 
 * Changed the uppercases of the header row using LOWER Function.
 
+![lower](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/59032464-90c9-45a3-82f0-9110dd81e582)
+
 * Using TRIM function to remove the leading or trailing spaces from the texts.
 
 * Removed the Company name from Product_name using the combination of RIGHT, LEN and SEARCH function, and replaced original column with the new one.
+
+![right](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/3ce269c4-5edc-495c-a0e6-07dc894609aa)
   
 * Changed the datatype of numerical columns using Text-to-column option.
 
@@ -78,6 +84,32 @@ The same steps were followed for RATINGS dataset, and it is saved as rating_csv 
 4. Which company had the highest net profit?
 5. Is there any correlation between quantity demanded and profit?
 6. What is the relation between ratings and selling price, cost price and quantity demanded?
+
+
+![summary C](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/ce42b41f-bafa-46ab-b1ca-aec09ed3a4a0)
+
+![summary A](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/150bdf51-2819-4129-8472-3d4058266f5c)
+
+
+![pdt cat C](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/93e8d0cb-c496-4fa0-b376-829f8dc27c8b)
+
+![pdt cat A](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/015d61dc-af7a-4424-a77d-65862d5bcfa6)
+
+
+![pdt type C](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/1d636d35-89a0-4a6b-9236-b838157490a1)
+
+![pdt type A](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/12eeac61-7518-4440-b0ee-002e8f5950d4)
+
+![Q C](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/9d033db5-42aa-4549-9bca-98dc59ad5c69)
+
+![Q A](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/4dde7b06-4e0b-4df0-8329-525c1323ce09)
+
+![outlier C](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/90f1c4e6-3c98-4ec4-ae13-90afddddfd23)
+
+![Outlier A](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/9b173a31-6a19-4187-9ff5-c07672ea63da)
+
+
+
 
 
 ![Rplot06](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/d7f2baa3-6efd-4a4d-b563-e8a6550dd81c)
