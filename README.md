@@ -9,9 +9,9 @@ This project is done as a guided project on Coursera. There are two datasets nam
 
 ## Objective:
 
-Apply data manipulation and data Visualization to find out which products will be more profitable.
-Perform descriptive statistics on the data set to analyze trends and patterns.
-Find correlation between different variables and gather insights for strategic decision making.
+* Apply data manipulation and data Visualization to find out which products will be more profitable.
+* Perform descriptive statistics on the data set to analyze trends and patterns.
+* Find correlation between different variables and gather insights for strategic decision making.
 
 ## Tools used:
 
@@ -72,7 +72,12 @@ The same steps were followed for RATINGS dataset, and it is saved as rating_csv 
 
 ## Analysis:
 
-
+1. Find out the profit for each product type and category.
+2. Which product is the most profitable?
+3. Which product is the least profitable?
+4. Which company had the highest net profit?
+5. Is there any correlation between quantity demanded and profit?
+6. What is the relation between ratings and selling price, cost price and quantity demanded?
 
 ## Conclusion: 
 
