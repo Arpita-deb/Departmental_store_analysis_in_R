@@ -5,11 +5,9 @@ library(corrplot)
 library(ggcorrplot)
 
 # Loading the datasets
-# store dataset
 store <- read_csv("C:/Users/Dell/Desktop/store_csv.csv")
 View(store)
 
-# rating dataset
 ratings <- read_csv("C:/Users/Dell/Desktop/ratings_csv.csv")
 View(ratings)
 
@@ -43,7 +41,7 @@ high_rating %>%
 
 low_rating <- filter(ratings, ratings <= "3")
 
-#Showing the products in ascending order of rating
+# Showing the products in ascending order of rating
 
 low_rating %>% 
   arrange(ratings)
@@ -56,12 +54,14 @@ store_df <- mutate(store, profit = selling_price - cost_price,
 View(store_df)
 
 rating_df <- mutate(ratings, profit = selling_price - cost_price,
-                   net_profit = profit * quantity_demanded,
-                   profit_percent = profit / cost_price * 100)
+                             net_profit = profit * quantity_demanded,
+                             profit_percent = profit / cost_price * 100)
 View(rating_df)
 
 
+
 # Statistical Summary
+
 (net_profit_summary <- summarise(store_df, 
                                 avg_profit=mean(net_profit),
                                 sum=sum(net_profit),
@@ -71,29 +71,32 @@ View(rating_df)
                                 variance=var(net_profit),
                                 std_dev=sd(net_profit)))
 
-# Quantile - shows the minimum, 25%, 50% (median), 75%, maximum net profit
+# Quantile - shows the minimum (0%), 25%, 50% (median), 75% and maximum (100%) values of net profit
+
 store_df %>% reframe(Quantile= quantile(net_profit))
 
 # Range - shows the range (minimum - maximum values) of net profit 
+
 store_df %>% reframe(Range= range(net_profit))
 
 
 # Top product category in 2020:
 # Summary statistics of net profit for product category
+# Showing the product categories in descending order of total net profit
 
 store_df %>% 
-  group_by(product_category) %>% 
-  summarise(
-    count=n(),
-    sum_profit=sum(net_profit),
-    avg_profit=mean(net_profit),
-    min_profit=min(net_profit),
-    max_profit=max(net_profit)
-  ) %>% 
+    group_by(product_category) %>% 
+    summarise(count=n(),
+              sum_profit=sum(net_profit),
+              avg_profit=mean(net_profit),
+              min_profit=min(net_profit),
+              max_profit=max(net_profit)
+              ) %>% 
   arrange(desc(sum_profit))
 
 
 # Plotting a Bar chart to show total net profit of each product category
+
 store_df %>%                                                                                # using the store dataset
   group_by(product_category) %>%                                                            # grouping the data by product category
   summarise(total_profit= sum(net_profit)) %>%                                              # aggregating the net profit
@@ -108,18 +111,19 @@ store_df %>%                                                                    
   theme(panel.background = element_blank(), plot.title = element_text( size=16)) +          # removing the background grids and setting the title size
   theme(axis.text.x = element_text(angle = 0, vjust=1, hjust=1))                            # adjusting the X-axis labels to prevent overlapping
 
+
 # Top product type used in 2020:
 # Summary statistics of net profit for product type
+# Showing the product types in descending order of total net profit
 
 store_df %>% 
   group_by(product_type) %>% 
-  summarise(
-    count=n(),
-    sum_profit=sum(net_profit),
-    avg_profit=mean(net_profit),
-    min_profit=min(net_profit),
-    max_profit=max(net_profit)
-  ) %>% 
+  summarise(count=n(),
+            sum_profit=sum(net_profit),
+            avg_profit=mean(net_profit),
+            min_profit=min(net_profit),
+            max_profit=max(net_profit)
+            ) %>% 
   arrange(desc(sum_profit))
 
 # Plotting a Bar chart to show total net profit of each product type
@@ -138,6 +142,7 @@ store_df %>%
 
 
 # Top products by quantity demanded
+# Showing the products in descending order of quantity demanded
 
 store_df %>% 
   group_by(product_type) %>% 
@@ -149,22 +154,23 @@ store_df %>%
 store %>% 
   group_by(product_type) %>% 
   summarise(total_quantity = sum(quantity_demanded)) %>% 
-  ggplot(aes(x=product_type, y= total_quantity))+ 
-  geom_col(width=0.6, fill="lightsalmon1")+
-  labs(title="Products vs total quantity", subtitle='Bar chart showing total quantity demanded for each product type')+
-  xlab("Product type")+ 
-  ylab("Total quantity")+ 
+  ggplot(aes(x=product_type, y= total_quantity)) + 
+  geom_col(width=0.6, fill="lightsalmon1") +
+  labs(title="Products vs total quantity", subtitle='Bar chart showing total quantity demanded for each product type') +
+  xlab("Product type") + 
+  ylab("Total quantity") + 
   theme(text=element_text(size=12)) +
-  theme(panel.background = element_blank(),plot.title = element_text( size=16))+
+  theme(panel.background = element_blank(),plot.title = element_text( size=16)) +
   theme(axis.text.x = element_text(angle = 45 , vjust = 1 , hjust= 1 )) 
         
- 
-# Hygienic Products  
+# Since Hygienic products had the highest demand in 2020, let's dive deep into it.
+# Filtering data only for Hygienic Products  
 
 hygiene_pdt <- filter(store_df, product_type=='Hygiene')
 View(hygiene_pdt)
 
 # Plotting a bar chart for Hygiene products
+# The bar chart shows the total net profit for each category of Hygiene products
 
 ggplot(hygiene_pdt, aes(x=product_category, y=net_profit)) + 
   geom_col(width=0.6, fill='turquoise3') +
@@ -173,7 +179,7 @@ ggplot(hygiene_pdt, aes(x=product_category, y=net_profit)) +
   ylab(' Total Net Profit') +
   theme(panel.background = element_blank(),plot.title = element_text( size=16))
 
-# Selling Price VS Cost price
+# Selling Price VS Cost price Scatterplot
 
 ggplot(store_df, aes(x=cost_price, y=selling_price, color=product_type)) + 
   geom_jitter(alpha=0.5)+
@@ -184,13 +190,13 @@ ggplot(store_df, aes(x=cost_price, y=selling_price, color=product_type)) +
   theme(text=element_text(size=10)) +
   theme(panel.background = element_blank(), plot.title = element_text( size=16))
 
-# Outliers - showing the product detail of outliers (i.e. its value is much different than the rest of the data points)
+# Outliers - showing the product detail of outliers (whose value is much different than the rest of the data points)
 
 (store_df %>% 
 filter(cost_price >750) %>% 
-  select(product_name, cost_price, selling_price, net_profit))
+  select(product_name, cost_price, selling_price, net_profit))   # Selecting only the 4 columns
 
-# Profit VS Cost price
+# Profit VS Cost price Scatterplot
 
 ggplot(store_df, aes(x=cost_price, y=profit)) + 
   geom_jitter(alpha=0.5) +
@@ -200,7 +206,7 @@ ggplot(store_df, aes(x=cost_price, y=profit)) +
   theme(text=element_text(size=10)) +
   theme(panel.background = element_blank(), plot.title = element_text( size=16))
 
-#Profit VS Ratings
+#Profit VS Ratings Scatterplot
 
 ggplot(rating_df, aes(x=ratings, y=profit, size=net_profit, color=product_category)) + 
   geom_jitter(alpha=0.5) +
@@ -210,7 +216,7 @@ ggplot(rating_df, aes(x=ratings, y=profit, size=net_profit, color=product_catego
   theme(panel.background = element_blank(), plot.title = element_text( size=16))
 
 
-# Profit vs Quantity demanded
+# Profit vs Quantity demanded Scatterplot
 
 ggplot(store_df, aes(x=quantity_demanded, y=profit, color=product_type, size=net_profit)) + 
   geom_jitter(alpha=0.5)+
@@ -222,6 +228,7 @@ ggplot(store_df, aes(x=quantity_demanded, y=profit, color=product_type, size=net
   theme(axis.text.x = element_text(angle = 0 , vjust = 1 , hjust= 1 ))
 
 # Profits of different companies
+# A bar chart is plotted to show the total amount of net profit for each companies broken down by product types
 
 store_df %>% 
   ggplot(aes(x=company, y=net_profit, fill= product_type))+ 
@@ -231,8 +238,7 @@ store_df %>%
   ylab("Net Profit")+
   theme(panel.background = element_blank(), plot.title = element_text( size=16))
 
-# Correlation between ratings and quantity demanded
-
+# Correlation between Ratings and Quantity demanded
 
 cor(rating_df $ ratings, rating_df $ quantity_demanded)
 
@@ -245,11 +251,11 @@ plot(rating_df $ ratings, rating_df $ quantity_demanded, pch=21,
      cex=3)
 title('Correlation plot between Ratings and Quantity Demanded')
 
-# Correlation between ratings and selling price
+# Correlation between Ratings and Selling price
 
 cor(rating_df $ ratings, rating_df $ selling_price)
 
-# Correlation plot between Ratings and sSelling price
+# Correlation plot between Ratings and Selling price
 
 plot(rating_df $ ratings, rating_df $ selling_price, pch=21,
      xlab='Ratings', 
@@ -258,7 +264,8 @@ plot(rating_df $ ratings, rating_df $ selling_price, pch=21,
      cex=3)
 title('Correlation plot between Ratings and Selling Price')
 
-# Correlation between ratings and cost price
+# Correlation between Ratings and Cost price
+
 cor(rating_df $ ratings, rating_df $ cost_price)
 
 # Correlation plot between Ratings and Cost price
@@ -277,14 +284,14 @@ title('Correlation plot between Ratings and Cost Price')
 cor.test(rating_df $ ratings, rating_df $ profit)
 
 # Correlation matrix
+
 store3 <- dplyr::select_if(store_df, is.numeric)
 r <- cor(store3,use="complete.obs")
 round(r,2)
 
-# Correlation matrix- heatmap
+# Correlation matrix - heatmap
 
-ggcorrplot(r,
-           title= 'Correlation matrix heatmap')
+ggcorrplot(r, title= 'Correlation matrix heatmap')
 
 # The sorted lower triangle
 
