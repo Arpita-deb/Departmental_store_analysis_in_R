@@ -79,6 +79,40 @@ The same steps were followed for RATINGS dataset, and it is saved as rating_csv 
 5. Is there any correlation between quantity demanded and profit?
 6. What is the relation between ratings and selling price, cost price and quantity demanded?
 
+
+![Rplot06](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/d7f2baa3-6efd-4a4d-b563-e8a6550dd81c)
+
+![Rplot05](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/993f76c8-2674-41d1-a579-d8d7df2c25d6)
+
+![Rplot04](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/65b80a19-adf2-4d37-9e20-13ed493225eb)
+
+
+![Rplot03](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/0109b9c3-7827-46b3-b6c6-0d6e1f77f58e)
+
+![Rplot02](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/f88735f3-8e34-4c0c-9da8-368eabcb9cda)
+
+![Rplot01](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/01701f7c-19a6-47ff-bc84-c795790fce3d)
+
+
+![Rplot](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/cfa50a9e-ec5d-4a7b-b529-109da5a645a3)
+
+![pdt Vs total quan](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/3158fc30-c6a2-4de8-aa00-821164cd7178)
+
+
+![cp Vs sp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/13d1a440-898d-432c-9599-e6ca610a2a5e)
+
+![corr-rating_vs_cp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/e97ce91c-9dcf-485d-9b7f-d9ed95b1283e)
+
+![corrplot_sp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/e4da51c4-cb78-4625-a97d-dad97d1cc2b6)
+
+
+![corrplot_quantity](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/14259cd1-7853-4275-b28a-f352f97cc8e0)
+
+
+
+
+
+
 ## Conclusion: 
 
 * The highest selling product type in the year 2020 is turned out to be hygienic products followed by food grains and spices and snacks as can be seen in the column chart and coxcomb chart.
