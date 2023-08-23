@@ -133,4 +133,7 @@ The same steps were followed for RATINGS dataset, and it is saved as rating_csv 
 ## List of References:
 
 * Comma Separated Values file
+* tidyverse
+* ggplot
 * Correlation
+* Pearson's correlation matrix
