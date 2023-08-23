@@ -101,13 +101,11 @@ The same steps were followed for RATINGS dataset, and it is saved as rating_csv 
 
 ![cp Vs sp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/13d1a440-898d-432c-9599-e6ca610a2a5e)
 
-![corr-rating_vs_cp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/e97ce91c-9dcf-485d-9b7f-d9ed95b1283e)
+![Rplot07](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/40a8c4c9-e7c8-4056-acc5-de8509dfa042)
 
-![corrplot_sp](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/e4da51c4-cb78-4625-a97d-dad97d1cc2b6)
+![Rplot08](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/aa2d397e-5fbe-4189-855c-815f629b35a5)
 
-
-![corrplot_quantity](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/14259cd1-7853-4275-b28a-f352f97cc8e0)
-
+![Rplot09](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/da00281a-31e7-4e4b-9353-7fdee5182c92)
 
 
 
