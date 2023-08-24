@@ -9,9 +9,9 @@ This project is done as a guided project on Coursera. There are two datasets nam
 
 ## Objective:
 
-* Apply data manipulation and data Visualization to find out which products will be more profitable.
-* Perform descriptive statistics on the data set to analyze trends and patterns.
-* Find correlation between different variables and gather insights for strategic decision making.
+* To apply data manipulation and data Visualization to find out which products were more profitable.
+* To perform descriptive statistics on the data set to analyze trends and patterns.
+* To find correlation between different variables and gather insights for strategic decision making.
 
 ## Tools used:
 
@@ -64,7 +64,7 @@ Before feeding the data into RStudio, a quick cleanup is performed in Excel. The
 
     <img width="800" align='center' src="https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/59032464-90c9-45a3-82f0-9110dd81e582.png"/>
 
-* Using TRIM function to remove the leading or trailing spaces from the texts.
+* Used TRIM function to remove the leading or trailing spaces from the texts.
 
 * Removed the Company name from Product_name using the combination of RIGHT, LEN and SEARCH function, and replaced original column with the new one.
 
@@ -74,7 +74,7 @@ Before feeding the data into RStudio, a quick cleanup is performed in Excel. The
 
 * Renamed the file as store_csv and saved the file as a Comma Seperated Value (CSV) file.
 
-The same steps were followed for RATINGS dataset, and it is saved as rating_csv file.
+The same sata cleaning steps were performed for RATINGS dataset, and saved it as rating_csv file.
 
 ## Analysis:
 
@@ -180,6 +180,8 @@ Ratings have negative correlation with both selling price and cost price as can 
 
 ### Show the correlation matrices.
 
+A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship. It’s most commonly used in building regression models. 
+
 ![Rplot05](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/993f76c8-2674-41d1-a579-d8d7df2c25d6)
 
 ![Rplot04](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/65b80a19-adf2-4d37-9e20-13ed493225eb)
@@ -187,27 +189,38 @@ Ratings have negative correlation with both selling price and cost price as can 
 
 ## Conclusion: 
 
-* The highest selling product type in the year 2020 is turned out to be hygienic products followed by food grains and spices and snacks as can be seen in the column chart and coxcomb chart.
+* The Top 3 most profitable product type for 2020 were:
+    * Hygiene
+    * Packed Food
+    * Beauty products
+* The Top 3 most profitable product type for 2020 were:
+    * Dry Fruits
+    * Sanitizer
+    * Body care
+* The Top 3 most demanded products were:
+    * Foodgrains and spices
+    * Packed Food
+    * Hygiene
+  
+* As can be seen from the above lists, **Hygienic products** and **basic necessities (Packed food, foodgrains and spices, body care etc)** were most profitable and most demanded. It is in accord with the pandemic scenario where people were more health conscious and they spent more of their money basic necessities rather than expensive products.
 
-* Hygiene products also seem to be the most profitable one, along with baby products and household products, whereas organic food is the lowest profitable product in the year 2020. It is in accord with the pandemic scenario where people were more health conscious and they spent more of their money basic necessities rather than expensive products.
+* Keeping in view of public need, some companies like I, J and M turned their business in capitalizing on hygiene products. 
 
-* The highest using and most profitable household product are sanitizer followed by mask and handwash.
-
-* Keeping in view of public need, some companies like I, J and M turned their business in capitalizing on hygiene products producing more revenue at the end of the year.
-
-* The most popular hygiene products in the year 2020 were Mask(34%),sanitizer (28%), disinfectant(15%) and handwash(14%) as can be seen in the pie chart and interestingly as their demand increased their selling price decreased drastically.
+* The most popular hygiene products in the year 2020 were Sanitizer, Handwash, Disinfectant and Mask. Interestingly as their demand increased their selling price decreased drastically.
 
 * From the correlation plots we’ve found out that-
-   • Ratings and quantity demanded has a positive correlation i.e. ratings increase as quantity of a product is increased.
+   * Ratings and quantity demanded has a positive correlation i.e. ratings increase as quantity of a product is increased.
 
-   • Ratings and selling price have a negative correlation i.e. ratings decrease as selling price increases.
+   * Ratings and selling price have a negative correlation i.e. ratings decrease as selling price increases.
 
-   • Ratings and cost price have a negative correlation i.e. ratings decrease as selling price increases.
+   * Ratings and cost price have a negative correlation i.e. ratings decrease as selling price increases.
+
+From the above conclusion we can say that during the pandemic year, the companies which were focused on providing healthcare and basic necessities of life were most profitable. As these products were in constant demand, they needed to lower their costs. On the other hand, the demand for luxury products were low those days, and as a result they were costlier than any other time.
 
 ## List of References:
 
-* Comma Separated Values file
-* tidyverse
-* ggplot
-* Correlation
-* Pearson's correlation matrix
+* [Pipeline Operator (%>%)](https://www.analyticssteps.com/blogs/using-pipe-operator-simplify-your-code-r-programming)
+* [tidyverse](https://en.wikipedia.org/wiki/Tidyverse)
+* [ggplot](https://ggplot2.tidyverse.org/reference/ggplot.html)
+* [Correlation](https://www.analyticsvidhya.com/blog/2021/04/intuition-behind-correlation-definition-and-its-types/)
+* [Correlation matrix](https://builtin.com/data-science/correlation-matrix)
