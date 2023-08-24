@@ -1,4 +1,4 @@
-# 
+# Data Analysis of a Departmental store during Covid-19
 ## Application of Data Analysis in Business with R
 
 ## Introduction: 
@@ -180,12 +180,14 @@ Ratings have negative correlation with both selling price and cost price as can 
 
 ### Show the correlation matrices.
 
-A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship. It’s most commonly used in building regression models. 
+A correlation matrix is a statistical technique used to evaluate the relationship between two variables in a data set. The matrix is a table in which every cell contains a correlation coefficient, where 1 is considered a strong relationship between variables, 0 a neutral relationship and -1 a not strong relationship. 
 
 ![Rplot05](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/993f76c8-2674-41d1-a579-d8d7df2c25d6)
 
 ![Rplot04](https://github.com/Arpita-deb/Departmental_store_analysis_in_R/assets/139372731/65b80a19-adf2-4d37-9e20-13ed493225eb)
 </p><br>
+
+As can be clearly seen from the correlation matrices, cost price and selling price are highly correlated. They are also positively correlated with profit and net profit. Net profit is positively but weakly correlated with selling price, cost price, quantity demanded, profit and profit percentage. On the other hand, quantity demanded is negatively correlated with selling price, cost price, profit and profit percentage.  
 
 ## Conclusion: 
 
@@ -214,6 +216,9 @@ A correlation matrix is a statistical technique used to evaluate the relationshi
    * Ratings and selling price have a negative correlation i.e. ratings decrease as selling price increases.
 
    * Ratings and cost price have a negative correlation i.e. ratings decrease as selling price increases.
+
+* From the correlation matrices we found out the strength of correlations between various numerical variables. Cost price, selling price and profit are highly correlated. As quantity demanded increases the cost price, selling price and profit decrease, showing negative correlation between these variables. 
+
 
 From the above conclusion we can say that during the pandemic year, the companies which were focused on providing healthcare and basic necessities of life were most profitable. As these products were in constant demand, they needed to lower their costs. On the other hand, the demand for luxury products were low those days, and as a result they were costlier than any other time.
 
