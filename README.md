@@ -224,7 +224,7 @@ From the above conclusion we can say that during the pandemic year, the companie
 
 ## List of References:
 
-* [Pipeline Operator (%>%)](https://www.analyticssteps.com/blogs/using-pipe-operator-simplify-your-code-r-programming)
+* [Pipel Operator (%>%)](https://www.analyticssteps.com/blogs/using-pipe-operator-simplify-your-code-r-programming)
 * [tidyverse](https://en.wikipedia.org/wiki/Tidyverse)
 * [ggplot](https://ggplot2.tidyverse.org/reference/ggplot.html)
 * [Correlation](https://www.analyticsvidhya.com/blog/2021/04/intuition-behind-correlation-definition-and-its-types/)
