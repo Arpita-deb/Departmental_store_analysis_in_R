@@ -195,7 +195,7 @@ As can be clearly seen from the correlation matrices, cost price and selling pri
     * Hygiene
     * Packed Food
     * Beauty products
-* The Top 3 most profitable product type for 2020 were:
+* The Top 3 most profitable product category for 2020 were:
     * Dry Fruits
     * Sanitizer
     * Body care
