@@ -1,4 +1,4 @@
-# Data Analysis of a Departmental store during Covid-19
+# What were they buying on March 2020? 
 ## Application of Data Analysis in Business with R
 
 ## Introduction: 
