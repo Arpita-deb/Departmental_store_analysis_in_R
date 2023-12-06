@@ -1,4 +1,4 @@
-# What were they buying on March 2020? 
+# What were they buying during COVID - 19? 
 ## Application of Data Analysis in Business with R
 
 ## Introduction: 
