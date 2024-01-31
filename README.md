@@ -202,7 +202,7 @@ As can be seen from the correlation matrices, cost price and selling price are h
     * Sanitizer
     * Body care products
 * The Top 3 most demanded products were:
-    * Foodcgrains and spices
+    * Food grains and spices
     * Packed Food
     * Hygienic products
   
