@@ -225,6 +225,15 @@ As can be seen from the correlation matrices, cost price and selling price are h
 
 From the above conclusion we can say that during the pandemic year, the companies which were focused on providing healthcare and basic necessities of life were most profitable. As these products were in constant demand, they needed to lower their costs. On the other hand, the demand for luxury products were low those days, and as a result they were costlier than any other time.
 
+## Recommendations for the businesses:
+
+* The businesses should focus on meeting the needs and preferences of the consumers in the pandemic situation, by offering products that are essential, hygienic, and affordable.
+
+* The businesses should also explore new opportunities and markets for their products, such as online platforms, delivery services, or partnerships with other businesses.
+
+* The businesses should monitor the feedback and ratings of their products, and adjust their pricing and quality accordingly, to maintain customer satisfaction and loyalty.
+
+* The businesses should also be prepared for the post-pandemic scenario, by diversifying their product portfolio, investing in innovation and research, and adapting to the changing consumer behavior and demand.
 
 ## Limitation of the project:
 
